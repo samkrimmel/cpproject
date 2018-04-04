@@ -35,7 +35,7 @@ from ggame import *
 def printBoard():
     
 def isEmpty(squareNumber):
-
+    
 def winner():
     
 def fullBoard():
