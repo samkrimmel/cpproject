@@ -17,14 +17,14 @@ whiteLine = LineStyle(1,white)
     #squares
 
 s1 = RectangleAsset(50,50, whiteLine, red)
-s2 = RectangleAsset
-s3 = RectangleAsset
-s4 = RectangleAsset
-s5 = RectangleAsset
-s6 = RectangleAsset
-s7 = RectangleAsset
-s8 = RectangleAsset
-s9 = RectangleAsset
+s2 = RectangleAsset(50,50, whiteLine, red)
+s3 = RectangleAsset(50,50, whiteLine, red)
+s4 = RectangleAsset(50,50, whiteLine, red)
+s5 = RectangleAsset(50,50, whiteLine, red)
+s6 = RectangleAsset(50,50, whiteLine, red)
+s7 = RectangleAsset(50,50, whiteLine, red)
+s8 = RectangleAsset(50,50, whiteLine, red)
+s9 = RectangleAsset(50,50, whiteLine, red)
 
 #imports
 
@@ -36,12 +36,15 @@ def printBoard():
     
 def isEmpty(squareNumber):
     
+def computerTurn():
+    
 def winner():
     
 def fullBoard():
 
 
 if __name__ == '__main__':
+    #SpriteSquares
     Sprite(s1)
-    App().run()
+    
     
