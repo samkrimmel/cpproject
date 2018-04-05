@@ -18,7 +18,7 @@ def printBoard(event):
     if event.x < ss and event.y < ss:
         Sprite(x,(0,0))
     elif event.x > ss and event.x < 2*ss and event.y < ss:
-        Sprite(x,(0,ss))
+        Sprite(x,(ss,0))
     
     return
     
