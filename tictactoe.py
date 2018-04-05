@@ -63,8 +63,8 @@ if __name__ == '__main__':
     
         #board
         
-    lineVertical = RectangleAsset(LINEW,linel, blackLine, black)
-    lineHorizontal = RectangleAsset(linel,LINEW, blackLine, black)
+    lineVertical = RectangleAsset(LINEW,LINEL, blackLine, black)
+    lineHorizontal = RectangleAsset(LINEL,LINEW, blackLine, black)
     
         #X and O
     
