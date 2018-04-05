@@ -9,6 +9,8 @@ from ggame import *
 #CONSTANTS
 
 ss = 100
+linew = 6
+linel = 3*ss
 
 #functions
 
@@ -40,7 +42,7 @@ if __name__ == '__main__':
         #lines
     
     whiteLine = LineStyle(1,white)
-    blackLine = LineStyle(1,black)
+    blackLine = LineStyle(6,black)
     
         #squares
     
@@ -55,9 +57,10 @@ if __name__ == '__main__':
     s9 = RectangleAsset(ss,ss, whiteLine, red)
     
         #board
-    
-    
         
+    lineVertical = RectangleAsset(linew,linel, blackLine, black)
+    lineHorizontal = RectangleAsset(linel,linew, blackLine, black)
+    
         #X and O
     
         #SpriteSquares
@@ -71,5 +74,13 @@ if __name__ == '__main__':
     Sprite(s7,(0,2*ss))
     Sprite(s8,(ss,2*ss))
     Sprite(s9,(2*ss,2*ss))
+    
+        #SpriteLines
+        
+    Sprite(lineVertical,(ss,0))
+    Sprite(lineVertical,(2*ss,0))
+    Sprite(lineHorizontal,(0,ss))
+    Sprite(lineHorizontal,(0,2*ss))
+    
     App().run()
         
