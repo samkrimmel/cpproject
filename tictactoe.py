@@ -14,7 +14,8 @@ linel = 3*ss
 
 #functions
 
-def printBoard():
+def printBoard(event):
+    Sprite(x)
     return
     
 def isEmpty(squareNumber):
@@ -85,7 +86,9 @@ if __name__ == '__main__':
     Sprite(lineHorizontal,(0,ss))
     Sprite(lineHorizontal,(0,2*ss))
     
-    Sprite(o)
+        #listens
+        
+    App().listenMouseEvent('click',printBoard)
     
     App().run()
         
