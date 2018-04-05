@@ -10,8 +10,7 @@ from ggame import *
 
 SS = 100
 LINEW = 3
-LINEL = 3*ss
-BOX1X = 
+LINEL = 3*SS
 
 #functions
 
