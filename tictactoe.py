@@ -2,49 +2,65 @@
 #4/4/18
 #tictactoe.py - graphics version
 
-#GRAPHICS
-
-    #colors
-
-black = Color(0x000000,1)
-white = Color(0xFFFFFF,1)
-red = Color(0xff0000,1)
-
-    #lines
-
-whiteLine = LineStyle(1,white)
-
-    #squares
-
-s1 = RectangleAsset(50,50, whiteLine, red)
-s2 = RectangleAsset(50,50, whiteLine, red)
-s3 = RectangleAsset(50,50, whiteLine, red)
-s4 = RectangleAsset(50,50, whiteLine, red)
-s5 = RectangleAsset(50,50, whiteLine, red)
-s6 = RectangleAsset(50,50, whiteLine, red)
-s7 = RectangleAsset(50,50, whiteLine, red)
-s8 = RectangleAsset(50,50, whiteLine, red)
-s9 = RectangleAsset(50,50, whiteLine, red)
-
 #imports
 
 from ggame import *
 
+#CONSTANTS
+
+ss = 100
+
 #functions
 
 def printBoard():
+    return
     
 def isEmpty(squareNumber):
+    return
     
 def computerTurn():
+    return
     
 def winner():
+    return
     
 def fullBoard():
+    return
 
 
 if __name__ == '__main__':
-    #SpriteSquares
-    Sprite(s1)
+        #GRAPHICS
+    
+        #colors
+    
+    black = Color(0x000000,1)
+    white = Color(0xFFFFFF,1)
+    red = Color(0xff0000,1)
+    
+        #lines
+    
+    whiteLine = LineStyle(1,white)
+    blackLine = LineStyle(1,black)
+    
+        #squares
+    
+    s1 = RectangleAsset(ss,ss, blackLine, red)
+    s2 = RectangleAsset(ss,ss, blackLine, red)
+    s3 = RectangleAsset(ss,ss, blackLine, red)
+    s4 = RectangleAsset(ss,ss, blackLine, red)
+    s5 = RectangleAsset(ss,ss, blackLine, red)
+    s6 = RectangleAsset(ss,ss, blackLine, red)
+    s7 = RectangleAsset(ss,ss, blackLine, red)
+    s8 = RectangleAsset(ss,ss, blackLine, red)
+    s9 = RectangleAsset(ss,ss, blackLine, red)
+    
+        #board
     
     
+        
+        #X and O
+    
+        #SpriteSquares
+        Sprite(s1)
+        App().run()
+        
