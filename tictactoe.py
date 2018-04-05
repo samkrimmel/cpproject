@@ -15,7 +15,11 @@ linel = 3*ss
 #functions
 
 def printBoard(event):
-    Sprite(x)
+    if event.x < ss and event.y < ss:
+        Sprite(x,(0,0))
+    elif event.x > ss and event.x < 2*ss and event.y < ss:
+        Sprite(x,(0,ss))
+    
     return
     
 def isEmpty(squareNumber):
