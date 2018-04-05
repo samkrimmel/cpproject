@@ -9,7 +9,7 @@ from ggame import *
 #CONSTANTS
 
 ss = 100
-linew = 6
+linew = 1
 linel = 3*ss
 
 #functions
