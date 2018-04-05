@@ -44,15 +44,15 @@ if __name__ == '__main__':
     
         #squares
     
-    s1 = RectangleAsset(ss,ss, blackLine, red)
-    s2 = RectangleAsset(ss,ss, blackLine, red)
-    s3 = RectangleAsset(ss,ss, blackLine, red)
-    s4 = RectangleAsset(ss,ss, blackLine, red)
-    s5 = RectangleAsset(ss,ss, blackLine, red)
-    s6 = RectangleAsset(ss,ss, blackLine, red)
-    s7 = RectangleAsset(ss,ss, blackLine, red)
-    s8 = RectangleAsset(ss,ss, blackLine, red)
-    s9 = RectangleAsset(ss,ss, blackLine, red)
+    s1 = RectangleAsset(ss,ss, whiteLine, red)
+    s2 = RectangleAsset(ss,ss, whiteLine, red)
+    s3 = RectangleAsset(ss,ss, whiteLine, red)
+    s4 = RectangleAsset(ss,ss, whiteLine, red)
+    s5 = RectangleAsset(ss,ss, whiteLine, red)
+    s6 = RectangleAsset(ss,ss, whiteLine, red)
+    s7 = RectangleAsset(ss,ss, whiteLine, red)
+    s8 = RectangleAsset(ss,ss, whiteLine, red)
+    s9 = RectangleAsset(ss,ss, whiteLine, red)
     
         #board
     
@@ -61,6 +61,15 @@ if __name__ == '__main__':
         #X and O
     
         #SpriteSquares
-        Sprite(s1)
-        App().run()
+        
+    Sprite(s1)
+    Sprite(s2,(ss,0))
+    Sprite(s3,(2ss,0))
+    Sprite(s4,(0,ss))
+    Sprite(s5,(ss,ss))
+    Sprite(s6,(2ss,ss))
+    Sprite(s7,(0,2ss))
+    Sprite(s8,(ss,2ss))
+    Sprite(s9,(2ss,2ss))
+    App().run()
         
