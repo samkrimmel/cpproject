@@ -64,12 +64,12 @@ if __name__ == '__main__':
         
     Sprite(s1)
     Sprite(s2,(ss,0))
-    Sprite(s3,(2ss,0))
+    Sprite(s3,(2*ss,0))
     Sprite(s4,(0,ss))
     Sprite(s5,(ss,ss))
-    Sprite(s6,(2ss,ss))
-    Sprite(s7,(0,2ss))
-    Sprite(s8,(ss,2ss))
-    Sprite(s9,(2ss,2ss))
+    Sprite(s6,(2*ss,ss))
+    Sprite(s7,(0,2*ss))
+    Sprite(s8,(ss,2*ss))
+    Sprite(s9,(2*ss,2*ss))
     App().run()
         
