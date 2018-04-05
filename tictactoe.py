@@ -8,17 +8,18 @@ from ggame import *
 
 #CONSTANTS
 
-ss = 100
-linew = 3
-linel = 3*ss
+SS = 100
+LINEW = 3
+LINEL = 3*ss
+BOX1X = 
 
 #functions
 
 def printBoard(event):
-    if event.x < ss and event.y < ss:
+    if event.x < SS and event.y < SS:
         Sprite(x,(18,0))
-    elif event.x > ss and event.x < 2*ss and event.y < ss:
-        Sprite(x,(ss+linew+18,0))
+    elif event.x > SS and event.x < 2*SS and event.y < SS:
+        Sprite(x,(SS+LINEW+18,0))
     
     return
     
@@ -51,20 +52,20 @@ if __name__ == '__main__':
     
         #squares
     
-    s1 = RectangleAsset(ss,ss, whiteLine, red)
-    s2 = RectangleAsset(ss,ss, whiteLine, red)
-    s3 = RectangleAsset(ss,ss, whiteLine, red)
-    s4 = RectangleAsset(ss,ss, whiteLine, red)
-    s5 = RectangleAsset(ss,ss, whiteLine, red)
-    s6 = RectangleAsset(ss,ss, whiteLine, red)
-    s7 = RectangleAsset(ss,ss, whiteLine, red)
-    s8 = RectangleAsset(ss,ss, whiteLine, red)
-    s9 = RectangleAsset(ss,ss, whiteLine, red)
+    s1 = RectangleAsset(SS,SS, whiteLine, red)
+    s2 = RectangleAsset(SS,SS, whiteLine, red)
+    s3 = RectangleAsset(SS,SS, whiteLine, red)
+    s4 = RectangleAsset(SS,SS, whiteLine, red)
+    s5 = RectangleAsset(SS,SS, whiteLine, red)
+    s6 = RectangleAsset(SS,SS, whiteLine, red)
+    s7 = RectangleAsset(SS,SS, whiteLine, red)
+    s8 = RectangleAsset(SS,SS, whiteLine, red)
+    s9 = RectangleAsset(SS,SS, whiteLine, red)
     
         #board
         
-    lineVertical = RectangleAsset(linew,linel, blackLine, black)
-    lineHorizontal = RectangleAsset(linel,linew, blackLine, black)
+    lineVertical = RectangleAsset(LINEW,linel, blackLine, black)
+    lineHorizontal = RectangleAsset(linel,LINEW, blackLine, black)
     
         #X and O
     
@@ -74,21 +75,21 @@ if __name__ == '__main__':
         #SpriteSquares
         
     Sprite(s1)
-    Sprite(s2,(ss+linew,0))
-    Sprite(s3,(2*(ss+linew),0))
-    Sprite(s4,(0,ss+linew))
-    Sprite(s5,(ss+linew,ss+linew))
-    Sprite(s6,(2*(ss+linew),ss+linew))
-    Sprite(s7,(0,2*(ss+linew)))
-    Sprite(s8,(ss+linew,2*(ss+linew)))
-    Sprite(s9,(2*(ss+linew),2*(ss+linew)))
+    Sprite(s2,(SS+LINEW,0))
+    Sprite(s3,(2*(SS+LINEW),0))
+    Sprite(s4,(0,SS+LINEW))
+    Sprite(s5,(SS+LINEW,SS+LINEW))
+    Sprite(s6,(2*(SS+LINEW),SS+LINEW))
+    Sprite(s7,(0,2*(SS+LINEW)))
+    Sprite(s8,(SS+LINEW,2*(SS+LINEW)))
+    Sprite(s9,(2*(SS+LINEW),2*(SS+LINEW)))
     
         #SpriteLines
         
-    Sprite(lineVertical,(ss,0))
-    Sprite(lineVertical,(2*ss,0))
-    Sprite(lineHorizontal,(0,ss))
-    Sprite(lineHorizontal,(0,2*ss))
+    Sprite(lineVertical,(SS,0))
+    Sprite(lineVertical,(2*SS,0))
+    Sprite(lineHorizontal,(0,SS))
+    Sprite(lineHorizontal,(0,2*SS))
     
         #listens
         
