@@ -66,14 +66,14 @@ if __name__ == '__main__':
         #SpriteSquares
         
     Sprite(s1)
-    Sprite(s2,(ss,0))
-    Sprite(s3,(2*ss,0))
-    Sprite(s4,(0,ss))
-    Sprite(s5,(ss,ss))
-    Sprite(s6,(2*ss,ss))
-    Sprite(s7,(0,2*ss))
-    Sprite(s8,(ss,2*ss))
-    Sprite(s9,(2*ss,2*ss))
+    Sprite(s2,(ss+linew,0))
+    Sprite(s3,(2*(ss+linew),0))
+    Sprite(s4,(0,ss+linew))
+    Sprite(s5,(ss+linew,ss+linew))
+    Sprite(s6,(2*(ss+linew),ss+linew))
+    Sprite(s7,(0,2*(ss+linew)))
+    Sprite(s8,(ss+linew,2*(ss+linew)))
+    Sprite(s9,(2*(ss+linew),2*(ss+linew)))
     
         #SpriteLines
         
