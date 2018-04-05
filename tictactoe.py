@@ -9,7 +9,7 @@ from ggame import *
 #CONSTANTS
 
 ss = 100
-linew = 1
+linew = 3
 linel = 3*ss
 
 #functions
@@ -63,6 +63,9 @@ if __name__ == '__main__':
     
         #X and O
     
+    x = TextAsset('X',fill=black, style='bold 70pt Times')
+    o = TextAsset('O',fill=black, style='bold 70pt Times')
+    
         #SpriteSquares
         
     Sprite(s1)
@@ -81,6 +84,8 @@ if __name__ == '__main__':
     Sprite(lineVertical,(2*ss,0))
     Sprite(lineHorizontal,(0,ss))
     Sprite(lineHorizontal,(0,2*ss))
+    
+    Sprite(o)
     
     App().run()
         
