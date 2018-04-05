@@ -16,9 +16,9 @@ linel = 3*ss
 
 def printBoard(event):
     if event.x < ss and event.y < ss:
-        Sprite(x,(0,0))
+        Sprite(x,(18,0))
     elif event.x > ss and event.x < 2*ss and event.y < ss:
-        Sprite(x,(ss,0))
+        Sprite(x,(ss+linew+18,0))
     
     return
     
