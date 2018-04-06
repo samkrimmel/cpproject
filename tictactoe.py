@@ -18,31 +18,31 @@ LINEL = 3*SS
 def mouseClick(event):
     if event.x < SS and event.y < SS:
         Sprite(x,(18,0))
-        s1 += True
+        sa1 += True
     elif event.x > SS and event.x < 2*SS and event.y < SS:
         Sprite(x,(SS+LINEW+18,0))
-        s2 += True
+        sa2 += True
     elif event.x > 2*SS and event.x < 3*SS and event.y < SS:
         Sprite(x,(2*(SS+LINEW)+18,0))
-        s3 += True
+        sa3 += True
     elif event.x < SS and event.y > SS and event.y < 2*SS:
         Sprite(x,(18,SS+LINEW))
-        s4 += True
+        sa4 += True
     elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS:
         Sprite(x,(SS+LINEW+18,SS))
-        s5 += True
+        sa5 += True
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS:
         Sprite(x,(2*(SS+LINEW)+18,SS))
-        s6 += True
+        sa6 += True
     elif event.x < SS and event.y > SS and event.y:
         Sprite(x,(18,2*SS))
-        s7 += True
+        sa7 += True
     elif event.x > SS and event.x < 2*SS and event.y > SS and event.y:
         Sprite(x,(SS+LINEW+18,2*SS))
-        s8 += True
+        sa8 += True
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
-        s9 += True
+        sa9 += True
     computerTurn()
     
 def isEmpty(squareNumber):
@@ -81,15 +81,15 @@ def fullBoard():
 
 if __name__ == '__main__':
         #TEMPORARY VARIABLE HOME
-    s1 = False
-    s2 = False
-    s3 = False
-    s4 = False
-    s5 = False
-    s6 = False
-    s7 = False
-    s8 = False
-    s9 = False
+    sa1 = False
+    sa2 = False
+    sa3 = False
+    sa4 = False
+    sa5 = False
+    sa6 = False
+    sa7 = False
+    sa8 = False
+    sa9 = False
         
         #GRAPHICS
     
