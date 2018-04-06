@@ -80,7 +80,7 @@ def computerTurn():
         data['sa9'] += True
     else:
         squarenum += randint(1,9)
-    
+        computerTurn()
     return
     
 def winner():
