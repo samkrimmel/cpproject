@@ -44,21 +44,21 @@ def computerTurn():
     if squarenum == 1:
         Sprite(o,(18,0))
     elif squarenum == 2:
-        Sprite(x,(SS+LINEW+18,0))
+        Sprite(o,(SS+LINEW+18,0))
     elif squarenum == 3:
-        Sprite(x,(2*(SS+LINEW)+18,0))
+        Sprite(o,(2*(SS+LINEW)+18,0))
     elif squarenum == 4:
-        Sprite(x,(18,SS+LINEW))
+        Sprite(o,(18,SS+LINEW))
     elif squarenum == 5:
-        Sprite(x,(SS+LINEW+18,SS))
+        Sprite(o,(SS+LINEW+18,SS))
     elif squarenum == 6:
-        Sprite(x,(2*(SS+LINEW)+18,SS))
+        Sprite(o,(2*(SS+LINEW)+18,SS))
     elif squarenum == 7:
-        Sprite(x,(18,2*SS))
+        Sprite(o,(18,2*SS))
     elif squarenum == 8:
-        Sprite(x,(SS+LINEW+18,2*SS))
+        Sprite(o,(SS+LINEW+18,2*SS))
     elif squarenum == 9:
-        Sprite(x,(2*(SS+LINEW)+18,2*SS))
+        Sprite(o,(2*(SS+LINEW)+18,2*SS))
     
     return
     
