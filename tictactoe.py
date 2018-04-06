@@ -78,6 +78,8 @@ def computerTurn():
     elif squarenum == 9 and data['sa9'] == False:
         Sprite(o,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += True
+    else:
+        squarenum += randint(1,9)
     
     return
     
