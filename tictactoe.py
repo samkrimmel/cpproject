@@ -23,6 +23,7 @@ def printBoard(event):
         Sprite(x,(2*(SS+LINEW)+18,0))
     elif event.x < SS and event.y > SS and event.y < 2*SS:
         Sprite(x,(18,SS+LINEW))
+    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS
     return
     
 def isEmpty(squareNumber):
