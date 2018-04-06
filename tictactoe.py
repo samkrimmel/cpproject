@@ -43,8 +43,6 @@ def mouseClick(event):
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y and data['sa1'] == False:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += True
-    else:
-        return
     computerTurn()
     
 def isEmpty(squareNumber):
