@@ -5,6 +5,7 @@
 #imports
 
 from ggame import *
+from random import randint
 
 #CONSTANTS
 
@@ -14,7 +15,7 @@ LINEL = 3*SS
 
 #functions
 
-def printBoard(event):
+def mouseClick(event):
     if event.x < SS and event.y < SS:
         Sprite(x,(18,0))
     elif event.x > SS and event.x < 2*SS and event.y < SS:
@@ -33,12 +34,31 @@ def printBoard(event):
         Sprite(x,(SS+LINEW+18,2*SS))
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
-    return
+    computerTurn()
     
 def isEmpty(squareNumber):
     return
     
 def computerTurn():
+    squarenum = randint(1,9)
+    if squarenum == 1:
+        Sprite(o,(18,0))
+    elif squarenum == 2:
+        Sprite(x,(SS+LINEW+18,0))
+    elif squarenum == 3:
+        Sprite(x,(2*(SS+LINEW)+18,0))
+    elif squarenum == 4:
+        Sprite(x,(18,SS+LINEW))
+    elif squarenum == 5:
+        Sprite(x,(SS+LINEW+18,SS))
+    elif squarenum == 6:
+        Sprite(x,(2*(SS+LINEW)+18,SS))
+    elif squarenum == 7:
+        Sprite(x,(18,2*SS))
+    elif squarenum == 8:
+        Sprite(x,(SS+LINEW+18,2*SS))
+    elif squarenum == 9:
+        Sprite(x,(2*(SS+LINEW)+18,2*SS))
     
     return
     
@@ -106,7 +126,7 @@ if __name__ == '__main__':
     
         #listens
         
-    App().listenMouseEvent('click',printBoard)
+    App().listenMouseEvent('click',mouseClick)
     
     App().run()
         
