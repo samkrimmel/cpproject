@@ -51,23 +51,23 @@ def isEmpty(squareNumber):
     
 def computerTurn():
     squarenum = randint(1,9)
-    if squarenum == 1:
+    if squarenum == 1 and data['sa1'] == False:
         Sprite(o,(18,0))
-    elif squarenum == 2:
+    elif squarenum == 2 and data['sa2'] == False:
         Sprite(o,(SS+LINEW+18,0))
-    elif squarenum == 3:
+    elif squarenum == 3 and data['sa3'] == False:
         Sprite(o,(2*(SS+LINEW)+18,0))
-    elif squarenum == 4:
+    elif squarenum == 4 and data['sa4'] == False:
         Sprite(o,(18,SS+LINEW))
-    elif squarenum == 5:
+    elif squarenum == 5 and data['sa5'] == False:
         Sprite(o,(SS+LINEW+18,SS))
-    elif squarenum == 6:
+    elif squarenum == 6 and data['sa6'] == False:
         Sprite(o,(2*(SS+LINEW)+18,SS))
-    elif squarenum == 7:
+    elif squarenum == 7 and data['sa7'] == False:
         Sprite(o,(18,2*SS))
-    elif squarenum == 8:
+    elif squarenum == 8 and data['sa8'] == False:
         Sprite(o,(SS+LINEW+18,2*SS))
-    elif squarenum == 9:
+    elif squarenum == 9 and data['sa9'] == False:
         Sprite(o,(2*(SS+LINEW)+18,2*SS))
     
     return
