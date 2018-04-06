@@ -7,17 +7,6 @@
 from ggame import *
 from random import randint
 
-#TEMPORARY VARIABLE HOME
-s1 = False
-s2 = False
-s3 = False
-s4 = False
-s5 = False
-s6 = False
-s7 = False
-s8 = False
-s9 = False
-
 #CONSTANTS
 
 SS = 100
@@ -91,6 +80,17 @@ def fullBoard():
 
 
 if __name__ == '__main__':
+        #TEMPORARY VARIABLE HOME
+    s1 = False
+    s2 = False
+    s3 = False
+    s4 = False
+    s5 = False
+    s6 = False
+    s7 = False
+    s8 = False
+    s9 = False
+        
         #GRAPHICS
     
         #colors
