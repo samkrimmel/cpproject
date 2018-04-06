@@ -16,31 +16,31 @@ LINEL = 3*SS
 #functions
 
 def mouseClick(event):
-    if event.x < SS and event.y < SS:
+    if event.x < SS and event.y < SS and data['sa1'] == False:
         Sprite(x,(18,0))
         data['sa1'] += True
-    elif event.x > SS and event.x < 2*SS and event.y < SS:
+    elif event.x > SS and event.x < 2*SS and event.y < SS and data['sa1'] == False: 
         Sprite(x,(SS+LINEW+18,0))
         data['sa2'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y < SS:
+    elif event.x > 2*SS and event.x < 3*SS and event.y < SS and data['sa1'] == False:
         Sprite(x,(2*(SS+LINEW)+18,0))
         data['sa3'] += True
-    elif event.x < SS and event.y > SS and event.y < 2*SS:
+    elif event.x < SS and event.y > SS and event.y < 2*SS and data['sa1'] == False:
         Sprite(x,(18,SS+LINEW))
         data['sa4'] += True
-    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS:
+    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and data['sa1'] == False:
         Sprite(x,(SS+LINEW+18,SS))
         data['sa5'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS:
+    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and data['sa1'] == False:
         Sprite(x,(2*(SS+LINEW)+18,SS))
         data['sa6'] += True
-    elif event.x < SS and event.y > SS and event.y:
+    elif event.x < SS and event.y > SS and event.y and data['sa1'] == False:
         Sprite(x,(18,2*SS))
         data['sa7'] += True
-    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y:
+    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y and data['sa1'] == False:
         Sprite(x,(SS+LINEW+18,2*SS))
         data['sa8'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y:
+    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y and data['sa1'] == False:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += True
     computerTurn()
