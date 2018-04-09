@@ -54,35 +54,35 @@ def isEmpty(squareNumber):
             return False
         return True
     if squareNumber == 2:
-        if data['sa1'] == 'x' or data['sa1'] == 'o':
+        if data['sa2'] == 'x' or data['sa2'] == 'o':
             return False
         return True
     if squareNumber == 3:
-        if data['sa1'] == 'x' or data['sa1'] == 'o':
+        if data['sa3'] == 'x' or data['sa3'] == 'o':
             return False
         return True
     if squareNumber == 4:
-        if data['sa1'] == 'x' or data['sa1'] == 'o':
+        if data['sa4'] == 'x' or data['sa4'] == 'o':
             return False
         return True
     if squareNumber == 5:
-        if data['sa1'] == 'x' or data['sa1'] == 'o':
+        if data['sa5'] == 'x' or data['sa5'] == 'o':
             return False
         return True
     if squareNumber == 6:
-        if data['sa1'] == 'x' or data['sa1'] == 'o':
+        if data['sa6'] == 'x' or data['sa6'] == 'o':
             return False
         return True
     if squareNumber == 7:
-        if data['sa1'] == 'x' or data['sa1'] == 'o':
+        if data['sa7'] == 'x' or data['sa7'] == 'o':
             return False
         return True
     if squareNumber == 8:
-        if data['sa1'] == 'x' or data['sa1'] == 'o':
+        if data['sa8'] == 'x' or data['sa8'] == 'o':
             return False
         return True
     if squareNumber == 9:
-        if data['sa1'] == 'x' or data['sa1'] == 'o':
+        if data['sa9'] == 'x' or data['sa9'] == 'o':
             return False
         return True
     
