@@ -16,72 +16,105 @@ LINEL = 3*SS
 #functions
 
 def mouseClick(event):
-    if event.x < SS and event.y < SS and data['sa1'] == False:
+    if event.x < SS and event.y < SS and isEmpty(1) == True:
         Sprite(x,(18,0))
-        data['sax1'] += True
-    elif event.x > SS and event.x < 2*SS and event.y < SS and data['sa2'] == False: 
+        data['sa1'] += 'x'
+    elif event.x > SS and event.x < 2*SS and event.y < SS and isEmpty(2) == True: 
         Sprite(x,(SS+LINEW+18,0))
-        data['sax2'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y < SS and data['sa3'] == False:
+        data['sa2'] += 'x'
+    elif event.x > 2*SS and event.x < 3*SS and event.y < SS and isEmpty(3) == True:
         Sprite(x,(2*(SS+LINEW)+18,0))
-        data['sax3'] += True
-    elif event.x < SS and event.y > SS and event.y < 2*SS and data['sa4'] == False:
+        data['sa3'] += 'x'
+    elif event.x < SS and event.y > SS and event.y < 2*SS and isEmpty(4) == True:
         Sprite(x,(18,SS+LINEW))
-        data['sax4'] += True
-    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and data['sa5'] == False:
+        data['sa4'] += 'x'
+    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and isEmpty(5) == True:
         Sprite(x,(SS+LINEW+18,SS))
-        data['sax5'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and data['sa6'] == False:
+        data['sa5'] += 'x'
+    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and isEmpty(6) == True:
         Sprite(x,(2*(SS+LINEW)+18,SS))
-        data['sax6'] += True
-    elif event.x < SS and event.y > SS and event.y and data['sa7'] == False:
+        data['sa6'] += 'x'
+    elif event.x < SS and event.y > SS and event.y and isEmpty(7) == True:
         Sprite(x,(18,2*SS))
-        data['sax7'] += True
-    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y and data['sa8'] == False:
+        data['sa7'] += 'x'
+    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y and isEmpty(8) == True:
         Sprite(x,(SS+LINEW+18,2*SS))
-        data['sax8'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y and data['sa9'] == False:
+        data['sa8'] += 'x'
+    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y and isEmpty(9) == True:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
-        data['sax9'] += True
+        data['sa9'] += 'x'
     if fullBoard() == True:
         return
     else:
         computerTurn()
     
 def isEmpty(squareNumber):
-    if squareNumber == True:
+    if squareNumber == 1:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
         return True
-    return False
+    if squareNumber == 2:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
+        return True
+    if squareNumber == 3:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
+        return True
+    if squareNumber == 4:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
+        return True
+    if squareNumber == 5:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
+        return True
+    if squareNumber == 6:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
+        return True
+    if squareNumber == 7:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
+        return True
+    if squareNumber == 8:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
+        return True
+    if squareNumber == 9:
+        if data['sa1'] == 'x' or data['sa1'] == 'o':
+            return False
+        return True
     
 def computerTurn():
     squarenum = randint(1,9)
-    if squarenum == 1 and data['sa1'] == False:
+    if squarenum == 1 and isEmpty(1) == True:
         Sprite(o,(18,0))
-        data['sao1'] += True
-    elif squarenum == 2 and data['sa2'] == False:
+        data['sa1'] += 'o'
+    elif squarenum == 2 and isEmpty(2) == True:
         Sprite(o,(SS+LINEW+18,0))
-        data['sao2'] += True
-    elif squarenum == 3 and data['sa3'] == False:
+        data['sa2'] += 'o'
+    elif squarenum == 3 and isEmpty(3) == True:
         Sprite(o,(2*(SS+LINEW)+18,0))
-        data['sao3'] += True
-    elif squarenum == 4 and data['sa4'] == False:
+        data['sa3'] += 'o'
+    elif squarenum == 4 and isEmpty(4) == True:
         Sprite(o,(18,SS+LINEW))
-        data['sao4'] += True
-    elif squarenum == 5 and data['sa5'] == False:
+        data['sa4'] += 'o'
+    elif squarenum == 5 and isEmpty(5) == True:
         Sprite(o,(SS+LINEW+18,SS))
-        data['sao5'] += True
-    elif squarenum == 6 and data['sa6'] == False:
+        data['sa5'] += 'o'
+    elif squarenum == 6 and isEmpty(6) == True:
         Sprite(o,(2*(SS+LINEW)+18,SS))
-        data['sao6'] += True
-    elif squarenum == 7 and data['sa7'] == False:
+        data['sa6'] += 'o'
+    elif squarenum == 7 and isEmpty(7) == True:
         Sprite(o,(18,2*SS))
-        data['sao7'] += True
-    elif squarenum == 8 and data['sa8'] == False:
+        data['sa7'] += 'o'
+    elif squarenum == 8 and isEmpty(8) == True:
         Sprite(o,(SS+LINEW+18,2*SS))
-        data['sao8'] += True
-    elif squarenum == 9 and data['sa9'] == False:
+        data['sa8'] += 'o'
+    elif squarenum == 9 and isEmpty(9) == True:
         Sprite(o,(2*(SS+LINEW)+18,2*SS))
-        data['sao9'] += True
+        data['sa9'] += 'o'
     else:
         squarenum += randint(1,9)
         computerTurn()
@@ -101,24 +134,15 @@ def fullBoard():
 if __name__ == '__main__':
     
     data = {}
-    data['sao1'] = False
-    data['sao2'] = False
-    data['sao3'] = False
-    data['sao4'] = False
-    data['sao5'] = False
-    data['sao6'] = False
-    data['sao7'] = False
-    data['sao8'] = False
-    data['sao9'] = False
-    data['sax1'] = False
-    data['sax2'] = False
-    data['sax3'] = False
-    data['sax4'] = False
-    data['sax5'] = False
-    data['sax6'] = False
-    data['sax7'] = False
-    data['sax8'] = False
-    data['sax9'] = False
+    data['sa1'] = ''
+    data['sa2'] = ''
+    data['sa3'] = ''
+    data['sa4'] = ''
+    data['sa5'] = ''
+    data['sa6'] = ''
+    data['sa7'] = ''
+    data['sa8'] = ''
+    data['sa9'] = ''
     
         #GRAPHICS
     
