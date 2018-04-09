@@ -121,7 +121,6 @@ def computerTurn():
     return
     
 def winner():
-    if 
     return
     
 def fullBoard():
