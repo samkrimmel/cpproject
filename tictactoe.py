@@ -43,7 +43,10 @@ def mouseClick(event):
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y and data['sa9'] == False:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += True
-    computerTurn()
+    if fullBoard() == True:
+        return
+    else:
+        computerTurn()
     
 def isEmpty(squareNumber):
     
@@ -87,7 +90,10 @@ def winner():
     return
     
 def fullBoard():
-    return
+    if data['s1'] == True and data['s2'] == True and data['s3'] == True and data['s4'] == True and data['s5'] == True and data['s6'] == True and data['s7'] == True and data['s8'] == True and data['s9'] == True:
+        return True
+    return False
+    
 
 
 if __name__ == '__main__':
