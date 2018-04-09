@@ -16,31 +16,31 @@ LINEL = 3*SS
 #functions
 
 def mouseClick(event):
-    if event.x < SS and event.y < SS and isEmpty(sax1,sao1) == False:
+    if event.x < SS and event.y < SS and data['sa1'] == False:
         Sprite(x,(18,0))
         data['sax1'] += True
-    elif event.x > SS and event.x < 2*SS and event.y < SS and isEmpty(sax2,sao2) == False: 
+    elif event.x > SS and event.x < 2*SS and event.y < SS and data['sa2'] == False: 
         Sprite(x,(SS+LINEW+18,0))
         data['sax2'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y < SS and isEmpty(sax3,sao3) == False:
+    elif event.x > 2*SS and event.x < 3*SS and event.y < SS and data['sa3'] == False:
         Sprite(x,(2*(SS+LINEW)+18,0))
         data['sax3'] += True
-    elif event.x < SS and event.y > SS and event.y < 2*SS and isEmpty(sax4,sao4) == False:
+    elif event.x < SS and event.y > SS and event.y < 2*SS and data['sa4'] == False:
         Sprite(x,(18,SS+LINEW))
         data['sax4'] += True
-    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and isEmpty(sax5,sao5) == False:
+    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and data['sa5'] == False:
         Sprite(x,(SS+LINEW+18,SS))
         data['sax5'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and isEmpty(sax6,sao6) == False:
+    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and data['sa6'] == False:
         Sprite(x,(2*(SS+LINEW)+18,SS))
         data['sax6'] += True
-    elif event.x < SS and event.y > SS and event.y and isEmpty(sax7,sao7) == False:
+    elif event.x < SS and event.y > SS and event.y and data['sa7'] == False:
         Sprite(x,(18,2*SS))
         data['sax7'] += True
-    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y and isEmpty(sax8,sao8) == False:
+    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y and data['sa8'] == False:
         Sprite(x,(SS+LINEW+18,2*SS))
         data['sax8'] += True
-    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y and isEmpty(sax9,sao9) == False:
+    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y and data['sa9'] == False:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sax9'] += True
     if fullBoard() == True:
@@ -48,38 +48,38 @@ def mouseClick(event):
     else:
         computerTurn()
     
-def isEmpty(squareNumberx,squareNumbero):
-    if squareNumberx == True or squareNumbero == True:
+def isEmpty(squareNumber):
+    if squareNumber == True:
         return True
     return False
     
 def computerTurn():
     squarenum = randint(1,9)
-    if squarenum == 1 and isEmpty(sax1,sao1) == False:
+    if squarenum == 1 and data['sa1'] == False:
         Sprite(o,(18,0))
         data['sao1'] += True
-    elif squarenum == 2 and isEmpty(sax2,sao2) == False:
+    elif squarenum == 2 and data['sa2'] == False:
         Sprite(o,(SS+LINEW+18,0))
         data['sao2'] += True
-    elif squarenum == 3 and isEmpty(sax3,sao3) == False:
+    elif squarenum == 3 and data['sa3'] == False:
         Sprite(o,(2*(SS+LINEW)+18,0))
         data['sao3'] += True
-    elif squarenum == 4 and isEmpty(sax4,sao4) == False:
+    elif squarenum == 4 and data['sa4'] == False:
         Sprite(o,(18,SS+LINEW))
         data['sao4'] += True
-    elif squarenum == 5 and isEmpty(sax5,sao5) == False:
+    elif squarenum == 5 and data['sa5'] == False:
         Sprite(o,(SS+LINEW+18,SS))
         data['sao5'] += True
-    elif squarenum == 6 and isEmpty(sax6,sao6) == False:
+    elif squarenum == 6 and data['sa6'] == False:
         Sprite(o,(2*(SS+LINEW)+18,SS))
         data['sao6'] += True
-    elif squarenum == 7 and isEmpty(sax7,sao7) == False:
+    elif squarenum == 7 and data['sa7'] == False:
         Sprite(o,(18,2*SS))
         data['sao7'] += True
-    elif squarenum == 8 and isEmpty(sax8,sao8) == False:
+    elif squarenum == 8 and data['sa8'] == False:
         Sprite(o,(SS+LINEW+18,2*SS))
         data['sao8'] += True
-    elif squarenum == 9 and isEmpty(sax9,sao9) == False:
+    elif squarenum == 9 and data['sa9'] == False:
         Sprite(o,(2*(SS+LINEW)+18,2*SS))
         data['sao9'] += True
     else:
@@ -92,7 +92,7 @@ def winner():
     return
     
 def fullBoard():
-    if isEmpty(sax1,sao1) == True and isEmpty(sax2,sao2) == True and isEmpty(sax3,sao3) == True and isEmpty(sax4,sao4) == True and isEmpty(sax5,sao5) == True and isEmpty(sax6,sao6) == True and isEmpty(sax7,sao7) == True and isEmpty(sax8,sao8) == True and isEmpty(sax9,sao9) == True:
+    if data['sa1'] == True and data['sa2'] == True and data['sa3'] == True and data['sa4'] == True and data['sa5'] == True and data['sa6'] == True and data['sa7'] == True and data['sa8'] == True and data['sa9'] == True:
         return True
     return False
     
