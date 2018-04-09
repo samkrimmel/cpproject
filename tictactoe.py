@@ -90,7 +90,7 @@ def winner():
     return
     
 def fullBoard():
-    if data['s1'] == True and data['s2'] == True and data['s3'] == True and data['s4'] == True and data['s5'] == True and data['s6'] == True and data['s7'] == True and data['s8'] == True and data['s9'] == True:
+    if data['sa1'] == True and data['sa2'] == True and data['sa3'] == True and data['sa4'] == True and data['sa5'] == True and data['sa6'] == True and data['sa7'] == True and data['sa8'] == True and data['sa9'] == True:
         return True
     return False
     
