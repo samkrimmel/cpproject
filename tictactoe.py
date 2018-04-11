@@ -54,8 +54,6 @@ def mouseClick(event):
         computerTurn()
     else:
         return
-    if fullBoard() == True:
-        return
     winner()
     
 def isEmpty(squareNumber):
@@ -97,6 +95,8 @@ def isEmpty(squareNumber):
         return True
     
 def computerTurn():
+    if fullBoard() == True:
+        return
     squarenum = randint(1,9)
     if squarenum == 1 and isEmpty(1) == True:
         Sprite(o,(18,0))
