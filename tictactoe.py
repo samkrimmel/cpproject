@@ -56,8 +56,6 @@ def mouseClick(event):
         return
     if fullBoard() == True:
         return
-    if winner() == True:
-        Sprite(winnerUser,(400,400))
     
 def isEmpty(squareNumber):
     if squareNumber == 1:
@@ -126,34 +124,45 @@ def computerTurn():
     elif squarenum == 9 and isEmpty(9) == True:
         Sprite(o,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += 'o'
-    elif winner() == True:
-        Sprite(winnerComputer,(400,400))
-    elif winner() == 1:
-        Sprite(tieGame,(400,400))
     else:
         squarenum += randint(1,9)
         computerTurn()
     return
     
 def winner():
-    if (data['sa1'] == 'x' and data['sa2'] == 'x' and data['sa3'] == 'x') or (data['sa1'] == 'o' and data['sa2'] == 'o' and data['sa3'] == 'o'):
-        return True
-    elif (data['sa4'] == 'x' and data['sa5'] == 'x' and data['sa6'] == 'x') or (data['sa4'] == 'o' and data['sa5'] == 'o' and data['sa6'] == 'o'):
-        return True
-    elif (data['sa7'] == 'x' and data['sa8'] == 'x' and data['sa9'] == 'x') or (data['sa7'] == 'o' and data['sa8'] == 'o' and data['sa9'] == 'o'):
-        return True
-    elif (data['sa1'] == 'x' and data['sa4'] == 'x' and data['sa7'] == 'x') or (data['sa1'] == 'o' and data['sa4'] == 'o' and data['sa7'] == 'o'):
-        return True
-    elif (data['sa2'] == 'x' and data['sa5'] == 'x' and data['sa8'] == 'x') or (data['sa2'] == 'o' and data['sa5'] == 'o' and data['sa8'] == 'o'):
-        return True
-    elif (data['sa3'] == 'x' and data['sa6'] == 'x' and data['sa9'] == 'x') or (data['sa3'] == 'o' and data['sa6'] == 'o' and data['sa9'] == 'o'):
-        return True
-    elif (data['sa1'] == 'x' and data['sa5'] == 'x' and data['sa9'] == 'x') or (data['sa1'] == 'o' and data['sa5'] == 'o' and data['sa9'] == 'o'):
-        return True
-    elif (data['sa3'] == 'x' and data['sa5'] == 'x' and data['sa7'] == 'x') or (data['sa3'] == 'o' and data['sa5'] == 'o' and data['sa7'] == 'o'):
-        return True
-    elif fullBoard() == True:
-        return 1
+    if data['sa1'] == 'x' and data['sa2'] == 'x' and data['sa3'] == 'x':
+        Sprite(winnerUser,(400,400))
+    elif data['sa4'] == 'x' and data['sa5'] == 'x' and data['sa6'] == 'x':
+        Sprite(winnerUser,(400,400))
+    elif data['sa7'] == 'x' and data['sa8'] == 'x' and data['sa9'] == 'x':
+        Sprite(winnerUser,(400,400))
+    elif data['sa1'] == 'x' and data['sa4'] == 'x' and data['sa7'] == 'x':
+        Sprite(winnerUser,(400,400))
+    elif data['sa2'] == 'x' and data['sa5'] == 'x' and data['sa8'] == 'x':
+        Sprite(winnerUser,(400,400))
+    elif data['sa3'] == 'x' and data['sa6'] == 'x' and data['sa9'] == 'x':
+        Sprite(winnerUser,(400,400))
+    elif data['sa1'] == 'x' and data['sa5'] == 'x' and data['sa9'] == 'x':
+        Sprite(winnerUser,(400,400))
+    elif data['sa3'] == 'x' and data['sa5'] == 'x' and data['sa7'] == 'x':
+        Sprite(winnerUser,(400,400))
+    if data['sa1'] == 'o' and data['sa2'] == 'o' and data['sa3'] == 'o':
+        Sprite(winnerComputer,(400,400))
+    elif data['sa4'] == 'o' and data['sa5'] == 'o' and data['sa6'] == 'o':
+        Sprite(winnerComputer,(400,400))
+    elif data['sa7'] == 'o' and data['sa8'] == 'o' and data['sa9'] == 'o':
+        Sprite(winnerComputer,(400,400))
+    elif data['sa1'] == 'o' and data['sa4'] == 'o' and data['sa7'] == 'o':
+        Sprite(winnerComputer,(400,400))
+    elif data['sa2'] == 'o' and data['sa5'] == 'o' and data['sa8'] == 'o':
+        Sprite(winnerComputer,(400,400))
+    elif data['sa3'] == 'o' and data['sa6'] == 'o' and data['sa9'] == 'o':
+        Sprite(winnerComputer,(400,400))
+    elif data['sa1'] == 'o' and data['sa5'] == 'o' and data['sa9'] == 'o':
+        Sprite(winnerComputer,(400,400))
+    elif data['sa3'] == 'o' and data['sa5'] == 'o' and data['sa7'] == 'o':
+        Sprite(winnerComputer,(400,400))
+    
     return False
     
 def fullBoard():
