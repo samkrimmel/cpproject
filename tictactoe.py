@@ -103,47 +103,47 @@ def computerTurn():
         Sprite(o,(18,0))
         data['sa1'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     elif squarenum == 2 and isEmpty(2) == True:
         Sprite(o,(SS+LINEW+18,0))
         data['sa2'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     elif squarenum == 3 and isEmpty(3) == True:
         Sprite(o,(2*(SS+LINEW)+18,0))
         data['sa3'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     elif squarenum == 4 and isEmpty(4) == True:
         Sprite(o,(18,SS+LINEW))
         data['sa4'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     elif squarenum == 5 and isEmpty(5) == True:
         Sprite(o,(SS+LINEW+18,SS))
         data['sa5'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     elif squarenum == 6 and isEmpty(6) == True:
         Sprite(o,(2*(SS+LINEW)+18,SS))
         data['sa6'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     elif squarenum == 7 and isEmpty(7) == True:
         Sprite(o,(18,2*SS))
         data['sa7'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     elif squarenum == 8 and isEmpty(8) == True:
         Sprite(o,(SS+LINEW+18,2*SS))
         data['sa8'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     elif squarenum == 9 and isEmpty(9) == True:
         Sprite(o,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += 'o'
         if winner() == True:
-        Sprite(winnerComputer,(400,400))
+            Sprite(winnerComputer,(400,400))
     else:
         squarenum += randint(1,9)
         computerTurn()
