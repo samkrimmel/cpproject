@@ -20,35 +20,35 @@ def mouseClick(event): #responds to user's input and places an X where they clic
         Sprite(x,(18,0))
         data['sa1'] += 'x'
         computerTurn()
-    elif event.x > SS and event.x < 2*SS and event.y < SS and isEmpty(2) == True: 
+    elif event.x > SS and event.x < 2*SS and event.y < SS and isEmpty(2) == True and data['gameEnd'] == False: 
         Sprite(x,(SS+LINEW+18,0))
         data['sa2'] += 'x'
         computerTurn()
-    elif event.x > 2*SS and event.x < 3*SS and event.y < SS and isEmpty(3) == True:
+    elif event.x > 2*SS and event.x < 3*SS and event.y < SS and isEmpty(3) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,0))
         data['sa3'] += 'x'
         computerTurn()
-    elif event.x < SS and event.y > SS and event.y < 2*SS and isEmpty(4) == True:
+    elif event.x < SS and event.y > SS and event.y < 2*SS and isEmpty(4) == True and data['gameEnd'] == False:
         Sprite(x,(18,SS+LINEW))
         data['sa4'] += 'x'
         computerTurn()
-    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and isEmpty(5) == True:
+    elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and isEmpty(5) == True and data['gameEnd'] == False:
         Sprite(x,(SS+LINEW+18,SS))
         data['sa5'] += 'x'
         computerTurn()
-    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and isEmpty(6) == True:
+    elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and isEmpty(6) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,SS))
         data['sa6'] += 'x'
         computerTurn()
-    elif event.x < SS and event.y > 2*SS and isEmpty(7) == True:
+    elif event.x < SS and event.y > 2*SS and isEmpty(7) == True and data['gameEnd'] == False:
         Sprite(x,(18,2*SS))
         data['sa7'] += 'x'
         computerTurn()
-    elif event.x > SS and event.x < 2*SS and event.y > 2*SS and isEmpty(8) == True:
+    elif event.x > SS and event.x < 2*SS and event.y > 2*SS and isEmpty(8) == True and data['gameEnd'] == False:
         Sprite(x,(SS+LINEW+18,2*SS))
         data['sa8'] += 'x'
         computerTurn()
-    elif event.x > 2*SS and event.x < 3*SS and event.y > 2*SS and isEmpty(9) == True:
+    elif event.x > 2*SS and event.x < 3*SS and event.y > 2*SS and isEmpty(9) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += 'x'
         computerTurn()
@@ -134,38 +134,55 @@ def computerTurn(): #generates a random number which corresponds to a square in 
 def winner(): #function that determines whether the user or computer has won and sprites the correct message, this is called at the end of each user and computer turn.
     if data['sa1'] == 'x' and data['sa2'] == 'x' and data['sa3'] == 'x':
         Sprite(winnerUser,(400,400))
+        data['gameEnd'] += True
     elif data['sa4'] == 'x' and data['sa5'] == 'x' and data['sa6'] == 'x':
         Sprite(winnerUser,(400,400))
+        data['gameEnd'] += True
     elif data['sa7'] == 'x' and data['sa8'] == 'x' and data['sa9'] == 'x':
         Sprite(winnerUser,(400,400))
+        data['gameEnd'] += True
     elif data['sa1'] == 'x' and data['sa4'] == 'x' and data['sa7'] == 'x':
         Sprite(winnerUser,(400,400))
+        data['gameEnd'] += True
     elif data['sa2'] == 'x' and data['sa5'] == 'x' and data['sa8'] == 'x':
         Sprite(winnerUser,(400,400))
+        data['gameEnd'] += True
     elif data['sa3'] == 'x' and data['sa6'] == 'x' and data['sa9'] == 'x':
         Sprite(winnerUser,(400,400))
+        data['gameEnd'] += True
     elif data['sa1'] == 'x' and data['sa5'] == 'x' and data['sa9'] == 'x':
         Sprite(winnerUser,(400,400))
+        data['gameEnd'] += True
     elif data['sa3'] == 'x' and data['sa5'] == 'x' and data['sa7'] == 'x':
         Sprite(winnerUser,(400,400))
+        data['gameEnd'] += True
     elif fullBoard() == True:
         Sprite(tieGame,(400,400))
+        data['gameEnd'] += True
     if data['sa1'] == 'o' and data['sa2'] == 'o' and data['sa3'] == 'o':
         Sprite(winnerComputer,(400,400))
+        data['gameEnd'] += True
     elif data['sa4'] == 'o' and data['sa5'] == 'o' and data['sa6'] == 'o':
         Sprite(winnerComputer,(400,400))
+        data['gameEnd'] += True
     elif data['sa7'] == 'o' and data['sa8'] == 'o' and data['sa9'] == 'o':
         Sprite(winnerComputer,(400,400))
+        data['gameEnd'] += True
     elif data['sa1'] == 'o' and data['sa4'] == 'o' and data['sa7'] == 'o':
         Sprite(winnerComputer,(400,400))
+        data['gameEnd'] += True
     elif data['sa2'] == 'o' and data['sa5'] == 'o' and data['sa8'] == 'o':
         Sprite(winnerComputer,(400,400))
+        data['gameEnd'] += True
     elif data['sa3'] == 'o' and data['sa6'] == 'o' and data['sa9'] == 'o':
         Sprite(winnerComputer,(400,400))
+        data['gameEnd'] += True
     elif data['sa1'] == 'o' and data['sa5'] == 'o' and data['sa9'] == 'o':
         Sprite(winnerComputer,(400,400))
+        data['gameEnd'] += True
     elif data['sa3'] == 'o' and data['sa5'] == 'o' and data['sa7'] == 'o':
         Sprite(winnerComputer,(400,400))
+        data['gameEnd'] += True
     
 def fullBoard(): #returns True if the board is entirely full and false if not, used to determine whether it is a tie and also to prevent the computer from taking a turn after the user has filled the board.
     if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
@@ -186,6 +203,7 @@ if __name__ == '__main__':
     data['sa7'] = ''
     data['sa8'] = ''
     data['sa9'] = ''
+    data['gameEnd'] = False
     
         #GRAPHICS
     
