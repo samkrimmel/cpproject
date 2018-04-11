@@ -197,8 +197,10 @@ if __name__ == '__main__':
     x = TextAsset('X',fill=black, style='bold 70pt Times')
     o = TextAsset('O',fill=black, style='bold 70pt Times')
     
-        #winner
+        #winnerText
     
+    winnerUser = TextAsset('YOU WIN!!',fill=black, style='bold 50pt Times')
+    winnerComputer = TextAsset('COMPUTER WINS!!',fill=black, style='bold 50pt Times')
         
         #SpriteSquares
         
