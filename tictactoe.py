@@ -56,6 +56,7 @@ def mouseClick(event):
         return
     if fullBoard() == True:
         return
+    winner()
     
 def isEmpty(squareNumber):
     if squareNumber == 1:
@@ -127,6 +128,7 @@ def computerTurn():
     else:
         squarenum += randint(1,9)
         computerTurn()
+    winner()
     return
     
 def winner():
@@ -163,7 +165,6 @@ def winner():
     elif data['sa3'] == 'o' and data['sa5'] == 'o' and data['sa7'] == 'o':
         Sprite(winnerComputer,(400,400))
     
-    return False
     
 def fullBoard():
     if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
