@@ -16,7 +16,7 @@ LINEL = 3*SS
 #functions
 
 def mouseClick(event): #responds to user's input and places an X where they click and calls the computer's turn, unless the spot is full or the click is off the board
-    if event.x < SS and event.y < SS and isEmpty(1) == True:
+    if event.x < SS and event.y < SS and isEmpty(1) == True and data['gameEnd'] == False:
         Sprite(x,(18,0))
         data['sa1'] += 'x'
         computerTurn()
