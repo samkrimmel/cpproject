@@ -125,23 +125,22 @@ def computerTurn():
     return
     
 def winner():
-    while True:
-        if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False:
-            return True
-        elif isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False:
-            return True
-        elif isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
-            return True
-        elif isEmpty(1) == False and isEmpty(4) == False and isEmpty(7) == False:
-            return True
-        elif isEmpty(2) == False and isEmpty(5) == False and isEmpty(8) == False:
-            return True
-        elif isEmpty(3) == False and isEmpty(6) == False and isEmpty(9) == False:
-            return True
-        elif isEmpty(1) == False and isEmpty(5) == False and isEmpty(9) == False:
-            return True
-        elif isEmpty(3) == False and isEmpty(5) == False and isEmpty(7) == False:
-            return True
+    if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False:
+        return True
+    elif isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False:
+        return True
+    elif isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
+        return True
+    elif isEmpty(1) == False and isEmpty(4) == False and isEmpty(7) == False:
+        return True
+    elif isEmpty(2) == False and isEmpty(5) == False and isEmpty(8) == False:
+        return True
+    elif isEmpty(3) == False and isEmpty(6) == False and isEmpty(9) == False:
+        return True
+    elif isEmpty(1) == False and isEmpty(5) == False and isEmpty(9) == False:
+        return True
+    elif isEmpty(3) == False and isEmpty(5) == False and isEmpty(7) == False:
+        return True
     return False
     
 def fullBoard():
