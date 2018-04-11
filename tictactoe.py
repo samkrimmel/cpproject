@@ -48,7 +48,8 @@ def mouseClick(event):
     elif winner() == True:
         Sprite(winnerUser,(400,400))
     else:
-        computerTurn()
+        return
+    computerTurn()
     
 def isEmpty(squareNumber):
     if squareNumber == 1:
