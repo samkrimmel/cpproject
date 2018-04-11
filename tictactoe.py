@@ -128,6 +128,8 @@ def computerTurn():
         data['sa9'] += 'o'
     elif winner() == True:
         Sprite(winnerComputer,(400,400))
+    elif winner() == 1:
+        Sprite(tieGame,(400,400))
     else:
         squarenum += randint(1,9)
         computerTurn()
@@ -150,6 +152,8 @@ def winner():
         return True
     elif (data['sa3'] == 'x' and data['sa5'] == 'x' and data['sa7'] == 'x') or (data['sa3'] == 'o' and data['sa5'] == 'o' and data['sa7'] == 'o'):
         return True
+    elif fullBoard() == True:
+        return 1
     return False
     
 def fullBoard():
@@ -211,6 +215,7 @@ if __name__ == '__main__':
     
     winnerUser = TextAsset('YOU WIN!!',fill=black, style='bold 50pt Times')
     winnerComputer = TextAsset('COMPUTER WINS!!',fill=black, style='bold 50pt Times')
+    tieGame = TextAsset('TIE GAME.',fill=black, style='bold 50pt Times')
         
         #SpriteSquares
         
