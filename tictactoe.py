@@ -164,7 +164,8 @@ def winner(): #function that determines whether the user or computer has won and
         Sprite(winnerComputer,(400,400))
     elif data['sa3'] == 'o' and data['sa5'] == 'o' and data['sa7'] == 'o':
         Sprite(winnerComputer,(400,400))
-    
+    if fullBoard() == True:
+        Sprite(tieGame,(400,400))
     
 def fullBoard(): #returns True if the board is entirely full and false if not, used to determine whether it is a tie and also to prevent the computer from taking a turn after the user has filled the board.
     if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
