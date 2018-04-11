@@ -15,7 +15,7 @@ LINEL = 3*SS
 
 #functions
 
-def mouseClick(event):
+def mouseClick(event): #responds to user's input and places an X where they click, unless 
     if event.x < SS and event.y < SS and isEmpty(1) == True:
         Sprite(x,(18,0))
         data['sa1'] += 'x'
