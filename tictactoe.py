@@ -45,6 +45,8 @@ def mouseClick(event):
         data['sa9'] += 'x'
     if fullBoard() == True:
         return
+    elif winner() == True:
+        
     else:
         computerTurn()
     
@@ -137,8 +139,8 @@ def winner():
         elif isEmpty(1) == False and isEmpty(5) == False and isEmpty(9) == False:
             return True
         else isEmpty(3) == False and isEmpty(5) == False and isEmpty(7) == False:
-            
-    return
+            return True
+    return False
     
 def fullBoard():
     if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
@@ -195,6 +197,9 @@ if __name__ == '__main__':
     x = TextAsset('X',fill=black, style='bold 70pt Times')
     o = TextAsset('O',fill=black, style='bold 70pt Times')
     
+        #winner
+    
+        
         #SpriteSquares
         
     Sprite(s1)
