@@ -46,7 +46,7 @@ def mouseClick(event):
     if fullBoard() == True:
         return
     elif winner() == True:
-        
+        Sprite(winnerUser,(400,400))
     else:
         computerTurn()
     
@@ -117,6 +117,8 @@ def computerTurn():
     elif squarenum == 9 and isEmpty(9) == True:
         Sprite(o,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += 'o'
+    elif winner() == True:
+        Sprite(winnerComputer,(400,400))
     else:
         squarenum += randint(1,9)
         computerTurn()
