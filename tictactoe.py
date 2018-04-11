@@ -125,21 +125,21 @@ def computerTurn():
     return
     
 def winner():
-    if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False:
+    if (data['sa1'] == 'x' and data['sa2'] == 'x' and data['sa3'] == 'x') or (data['sa1'] == 'o' and data['sa2'] == 'o' and data['sa3'] == 'o'):
         return True
-    elif isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False:
+    elif (data['sa4'] == 'x' and data['sa5'] == 'x' and data['sa6'] == 'x') or (data['sa4'] == 'o' and data['sa5'] == 'o' and data['sa6'] == 'o'):
         return True
-    elif isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
+    elif (data['sa7'] == 'x' and data['sa8'] == 'x' and data['sa9'] == 'x') or (data['sa7'] == 'o' and data['sa8'] == 'o' and data['sa9'] == 'o'):
         return True
-    elif isEmpty(1) == False and isEmpty(4) == False and isEmpty(7) == False:
+    elif (data['sa1'] == 'x' and data['sa4'] == 'x' and data['sa7'] == 'x') or (data['sa1'] == 'o' and data['sa4'] == 'o' and data['sa7'] == 'o'):
         return True
-    elif isEmpty(2) == False and isEmpty(5) == False and isEmpty(8) == False:
+    elif (data['sa2'] == 'x' and data['sa5'] == 'x' and data['sa8'] == 'x') or (data['sa2'] == 'o' and data['sa5'] == 'o' and data['sa8'] == 'o'):
         return True
-    elif isEmpty(3) == False and isEmpty(6) == False and isEmpty(9) == False:
+    elif (data['sa3'] == 'x' and data['sa6'] == 'x' and data['sa9'] == 'x') or (data['sa3'] == 'o' and data['sa6'] == 'o' and data['sa9'] == 'o'):
         return True
-    elif isEmpty(1) == False and isEmpty(5) == False and isEmpty(9) == False:
+    elif (data['sa1'] == 'x' and data['sa5'] == 'x' and data['sa9'] == 'x') or (data['sa1'] == 'o' and data['sa5'] == 'o' and data['sa9'] == 'o'):
         return True
-    elif isEmpty(3) == False and isEmpty(5) == False and isEmpty(7) == False:
+    elif (data['sa3'] == 'x' and data['sa5'] == 'x' and data['sa7'] == 'x') or (data['sa3'] == 'o' and data['sa5'] == 'o' and data['sa7'] == 'o'):
         return True
     return False
     
