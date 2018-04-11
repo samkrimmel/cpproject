@@ -19,48 +19,39 @@ def mouseClick(event): #responds to user's input and places an X where they clic
     if event.x < SS and event.y < SS and isEmpty(1) == True and data['gameEnd'] == False:
         Sprite(x,(18,0))
         data['sa1'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     elif event.x > SS and event.x < 2*SS and event.y < SS and isEmpty(2) == True and data['gameEnd'] == False: 
         Sprite(x,(SS+LINEW+18,0))
         data['sa2'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     elif event.x > 2*SS and event.x < 3*SS and event.y < SS and isEmpty(3) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,0))
         data['sa3'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     elif event.x < SS and event.y > SS and event.y < 2*SS and isEmpty(4) == True and data['gameEnd'] == False:
         Sprite(x,(18,SS+LINEW))
         data['sa4'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and isEmpty(5) == True and data['gameEnd'] == False:
         Sprite(x,(SS+LINEW+18,SS))
         data['sa5'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and isEmpty(6) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,SS))
         data['sa6'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     elif event.x < SS and event.y > 2*SS and isEmpty(7) == True and data['gameEnd'] == False:
         Sprite(x,(18,2*SS))
         data['sa7'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     elif event.x > SS and event.x < 2*SS and event.y > 2*SS and isEmpty(8) == True and data['gameEnd'] == False:
         Sprite(x,(SS+LINEW+18,2*SS))
         data['sa8'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     elif event.x > 2*SS and event.x < 3*SS and event.y > 2*SS and isEmpty(9) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += 'x'
-        if data['gameEnd'] == False:
-            computerTurn()
+        computerTurn()
     else:
         return
     winner()
