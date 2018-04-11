@@ -15,7 +15,7 @@ LINEL = 3*SS
 
 #functions
 
-def mouseClick(event): #responds to user's input and places an X where they click, unless 
+def mouseClick(event): #responds to user's input and places an X where they click and calls the computer's turn, unless the spot is full or the click is off the board
     if event.x < SS and event.y < SS and isEmpty(1) == True:
         Sprite(x,(18,0))
         data['sa1'] += 'x'
@@ -56,7 +56,7 @@ def mouseClick(event): #responds to user's input and places an X where they clic
         return
     winner()
     
-def isEmpty(squareNumber):
+def isEmpty(squareNumber): #a function that is used to tell whether a square is empty or occupied with an x or o.
     if squareNumber == 1:
         if data['sa1'] == 'x' or data['sa1'] == 'o':
             return False
@@ -94,7 +94,7 @@ def isEmpty(squareNumber):
             return False
         return True
     
-def computerTurn():
+def computerTurn(): #generates a random number which corresponds to a square in which the computer will move, unless that square is occupied in which case it calls the function again
     if fullBoard() == True:
         return
     squarenum = randint(1,9)
@@ -131,7 +131,7 @@ def computerTurn():
     winner()
     return
     
-def winner():
+def winner(): #function that determines whether the user or computer has won and sprites the correct message, this is called at the end of each user and computer turn.
     if data['sa1'] == 'x' and data['sa2'] == 'x' and data['sa3'] == 'x':
         Sprite(winnerUser,(400,400))
     elif data['sa4'] == 'x' and data['sa5'] == 'x' and data['sa6'] == 'x':
@@ -166,7 +166,7 @@ def winner():
         Sprite(winnerComputer,(400,400))
     
     
-def fullBoard():
+def fullBoard(): #returns True if the board is entirely full and false if not, used to determine whether it is a tie and also to prevent the computer from taking a turn after the user has filled the board.
     if isEmpty(1) == False and isEmpty(2) == False and isEmpty(3) == False and isEmpty(4) == False and isEmpty(5) == False and isEmpty(6) == False and isEmpty(7) == False and isEmpty(8) == False and isEmpty(9) == False:
         return True
     return False
