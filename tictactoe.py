@@ -19,38 +19,45 @@ def mouseClick(event):
     if event.x < SS and event.y < SS and isEmpty(1) == True:
         Sprite(x,(18,0))
         data['sa1'] += 'x'
+        computerTurn()
     elif event.x > SS and event.x < 2*SS and event.y < SS and isEmpty(2) == True: 
         Sprite(x,(SS+LINEW+18,0))
         data['sa2'] += 'x'
+        computerTurn()
     elif event.x > 2*SS and event.x < 3*SS and event.y < SS and isEmpty(3) == True:
         Sprite(x,(2*(SS+LINEW)+18,0))
         data['sa3'] += 'x'
+        computerTurn()
     elif event.x < SS and event.y > SS and event.y < 2*SS and isEmpty(4) == True:
         Sprite(x,(18,SS+LINEW))
         data['sa4'] += 'x'
+        computerTurn()
     elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and isEmpty(5) == True:
         Sprite(x,(SS+LINEW+18,SS))
         data['sa5'] += 'x'
+        computerTurn()
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and isEmpty(6) == True:
         Sprite(x,(2*(SS+LINEW)+18,SS))
         data['sa6'] += 'x'
+        computerTurn()
     elif event.x < SS and event.y > SS and event.y and isEmpty(7) == True:
         Sprite(x,(18,2*SS))
         data['sa7'] += 'x'
+        computerTurn()
     elif event.x > SS and event.x < 2*SS and event.y > SS and event.y and isEmpty(8) == True:
         Sprite(x,(SS+LINEW+18,2*SS))
         data['sa8'] += 'x'
+        computerTurn()
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y and isEmpty(9) == True:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += 'x'
+        computerTurn()
     else:
         return
     if fullBoard() == True:
         return
     elif winner() == True:
         Sprite(winnerUser,(400,400))
-    else:
-        computerTurn()
     
 def isEmpty(squareNumber):
     if squareNumber == 1:
