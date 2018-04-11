@@ -140,7 +140,7 @@ def winner():
             return True
         elif isEmpty(1) == False and isEmpty(5) == False and isEmpty(9) == False:
             return True
-        else isEmpty(3) == False and isEmpty(5) == False and isEmpty(7) == False:
+        elif isEmpty(3) == False and isEmpty(5) == False and isEmpty(7) == False:
             return True
     return False
     
