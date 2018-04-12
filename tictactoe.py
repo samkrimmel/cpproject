@@ -97,40 +97,39 @@ def isEmpty(squareNumber): #a function that is used to tell whether a square is 
 def computerTurn(): #generates a random number which corresponds to a square in which the computer will move, unless that square is occupied in which case it calls the function again
     if fullBoard() == True:
         return
-    if data['gameEnd'] == True:
-        return
-    squarenum = randint(1,9)
-    if squarenum == 1 and isEmpty(1) == True:
-        Sprite(o,(18,0))
-        data['sa1'] += 'o'
-    elif squarenum == 2 and isEmpty(2) == True:
-        Sprite(o,(SS+LINEW+18,0))
-        data['sa2'] += 'o'
-    elif squarenum == 3 and isEmpty(3) == True:
-        Sprite(o,(2*(SS+LINEW)+18,0))
-        data['sa3'] += 'o'
-    elif squarenum == 4 and isEmpty(4) == True:
-        Sprite(o,(18,SS+LINEW))
-        data['sa4'] += 'o'
-    elif squarenum == 5 and isEmpty(5) == True:
-        Sprite(o,(SS+LINEW+18,SS))
-        data['sa5'] += 'o'
-    elif squarenum == 6 and isEmpty(6) == True:
-        Sprite(o,(2*(SS+LINEW)+18,SS))
-        data['sa6'] += 'o'
-    elif squarenum == 7 and isEmpty(7) == True:
-        Sprite(o,(18,2*SS))
-        data['sa7'] += 'o'
-    elif squarenum == 8 and isEmpty(8) == True:
-        Sprite(o,(SS+LINEW+18,2*SS))
-        data['sa8'] += 'o'
-    elif squarenum == 9 and isEmpty(9) == True:
-        Sprite(o,(2*(SS+LINEW)+18,2*SS))
-        data['sa9'] += 'o'
-    else:
-        squarenum += randint(1,9)
-        computerTurn()
-    winner()
+    if data['gameEnd'] == False:
+        squarenum = randint(1,9)
+        if squarenum == 1 and isEmpty(1) == True:
+            Sprite(o,(18,0))
+            data['sa1'] += 'o'
+        elif squarenum == 2 and isEmpty(2) == True:
+            Sprite(o,(SS+LINEW+18,0))
+            data['sa2'] += 'o'
+        elif squarenum == 3 and isEmpty(3) == True:
+            Sprite(o,(2*(SS+LINEW)+18,0))
+            data['sa3'] += 'o'
+        elif squarenum == 4 and isEmpty(4) == True:
+            Sprite(o,(18,SS+LINEW))
+            data['sa4'] += 'o'
+        elif squarenum == 5 and isEmpty(5) == True:
+            Sprite(o,(SS+LINEW+18,SS))
+            data['sa5'] += 'o'
+        elif squarenum == 6 and isEmpty(6) == True:
+            Sprite(o,(2*(SS+LINEW)+18,SS))
+            data['sa6'] += 'o'
+        elif squarenum == 7 and isEmpty(7) == True:
+            Sprite(o,(18,2*SS))
+            data['sa7'] += 'o'
+        elif squarenum == 8 and isEmpty(8) == True:
+            Sprite(o,(SS+LINEW+18,2*SS))
+            data['sa8'] += 'o'
+        elif squarenum == 9 and isEmpty(9) == True:
+            Sprite(o,(2*(SS+LINEW)+18,2*SS))
+            data['sa9'] += 'o'
+        else:
+            squarenum += randint(1,9)
+            computerTurn()
+        winner()
     return
     
 def winner(): #function that determines whether the user or computer has won and sprites the correct message, this is called at the end of each user and computer turn.
