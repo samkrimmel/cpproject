@@ -55,9 +55,10 @@ def mouseClick(event): #responds to user's input and places an X where they clic
     else:
         return
     if data['piecePlaced'] == True:
+        computerTurn()
         data['piecePlaced'] += False
         winner()
-        computerTurn()
+        
     
 def isEmpty(squareNumber): #a function that is used to tell whether a square is empty or occupied with an x or o.
     if squareNumber == 1:
