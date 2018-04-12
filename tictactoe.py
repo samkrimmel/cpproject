@@ -97,6 +97,8 @@ def isEmpty(squareNumber): #a function that is used to tell whether a square is 
 def computerTurn(): #generates a random number which corresponds to a square in which the computer will move, unless that square is occupied in which case it calls the function again
     if fullBoard() == True:
         return
+    data['gameEnd'] == True:
+        return
     squarenum = randint(1,9)
     if squarenum == 1 and isEmpty(1) == True:
         Sprite(o,(18,0))
