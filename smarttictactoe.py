@@ -16,7 +16,7 @@ LINEL = 3*SS
 #functions
 
 def mouseClick(event): #responds to user's input and places an X where they click and calls the computer's turn, unless the spot is full or the click is off the board
-    data['piecePlaced'] = False
+    data['piecePlaced'] = False #variable to tell whether a piece is placed
     if data['gameEnd'] == False:
         if event.x < SS and event.y < SS and isEmpty(1) == True:
             Sprite(x,(18,0))
@@ -56,7 +56,7 @@ def mouseClick(event): #responds to user's input and places an X where they clic
             data['piecePlaced'] += True
         else:
             return
-    if data['piecePlaced'] == True:
+    if data['piecePlaced'] == True: #checks for a win and moves on to computer turn if a piece has been placed
         winner()
         computerTurn()
         
@@ -104,9 +104,7 @@ def computerTurn(): #generates a random number which corresponds to a square in 
     if fullBoard() == True: #makes sure there isn't a full board
         return
     if data['gameEnd'] == False: #makes sure the game hasn't already been won by the user
-        
-        #only works for three?
-        
+        #makes the computer block the user if they have two in a row
         if (data['sa3'] == 'x' and data['sa2'] == 'x' and isEmpty(1) == True) or (data['sa5'] == 'x' and data['sa9'] == 'x' and isEmpty(1) == True) or (data['sa4'] == 'x' and data['sa7'] == 'x' and isEmpty(1) == True):
             Sprite(o,(18,0))
             data['sa1'] += 'o'
@@ -134,7 +132,7 @@ def computerTurn(): #generates a random number which corresponds to a square in 
         elif (data['sa3'] == 'x' and data['sa6'] == 'x' and isEmpty(9) == True) or (data['sa1'] == 'x' and data['sa5'] == 'x' and isEmpty(9) == True) or (data['sa8'] == 'x' and data['sa7'] == 'x' and isEmpty(9) == True):
             Sprite(o,(2*(SS+LINEW)+18,2*SS))
             data['sa9'] += 'o'
-        else:
+        else: #if there isn't a place to block, the computer choses randomly
             squarenum = randint(1,9) #chooses random square
             if squarenum == 1 and isEmpty(1) == True: #makes sure square is empty
                 Sprite(o,(18,0)) #sprites the o
