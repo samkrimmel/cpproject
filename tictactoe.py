@@ -19,50 +19,44 @@ def mouseClick(event): #responds to user's input and places an X where they clic
     if event.x < SS and event.y < SS and isEmpty(1) == True and data['gameEnd'] == False:
         Sprite(x,(18,0))
         data['sa1'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     elif event.x > SS and event.x < 2*SS and event.y < SS and isEmpty(2) == True and data['gameEnd'] == False: 
         Sprite(x,(SS+LINEW+18,0))
         data['sa2'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     elif event.x > 2*SS and event.x < 3*SS and event.y < SS and isEmpty(3) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,0))
         data['sa3'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     elif event.x < SS and event.y > SS and event.y < 2*SS and isEmpty(4) == True and data['gameEnd'] == False:
         Sprite(x,(18,SS+LINEW))
         data['sa4'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     elif event.x > SS and event.x < 2*SS and event.y > SS and event.y < 2*SS and isEmpty(5) == True and data['gameEnd'] == False:
         Sprite(x,(SS+LINEW+18,SS))
         data['sa5'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     elif event.x > 2*SS and event.x < 3*SS and event.y > SS and event.y < 2*SS and isEmpty(6) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,SS))
         data['sa6'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     elif event.x < SS and event.y > 2*SS and isEmpty(7) == True and data['gameEnd'] == False:
         Sprite(x,(18,2*SS))
         data['sa7'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     elif event.x > SS and event.x < 2*SS and event.y > 2*SS and isEmpty(8) == True and data['gameEnd'] == False:
         Sprite(x,(SS+LINEW+18,2*SS))
         data['sa8'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     elif event.x > 2*SS and event.x < 3*SS and event.y > 2*SS and isEmpty(9) == True and data['gameEnd'] == False:
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += 'x'
-        winner()
-        computerTurn()
+        data['piecePlaced'] += True
     else:
         return
+    if data['piecePlaced'] == True:
+        winner()
+        computerTurn()
     
 def isEmpty(squareNumber): #a function that is used to tell whether a square is empty or occupied with an x or o.
     if squareNumber == 1:
@@ -103,13 +97,13 @@ def isEmpty(squareNumber): #a function that is used to tell whether a square is 
         return True
     
 def computerTurn(): #generates a random number which corresponds to a square in which the computer will move, unless that square is occupied in which case it calls the function again
-    if fullBoard() == True:
+    if fullBoard() == True: #makes sure there isn't a full board
         return
-    if data['gameEnd'] == False:
-        squarenum = randint(1,9)
-        if squarenum == 1 and isEmpty(1) == True:
-            Sprite(o,(18,0))
-            data['sa1'] += 'o'
+    if data['gameEnd'] == False: #makes sure the game hasn't already been won by the user
+        squarenum = randint(1,9) #chooses random square
+        if squarenum == 1 and isEmpty(1) == True: #makes sure square is empty
+            Sprite(o,(18,0)) #sprites the o
+            data['sa1'] += 'o' #updates the square variable to contain an 'o'
         elif squarenum == 2 and isEmpty(2) == True:
             Sprite(o,(SS+LINEW+18,0))
             data['sa2'] += 'o'
@@ -135,7 +129,7 @@ def computerTurn(): #generates a random number which corresponds to a square in 
             Sprite(o,(2*(SS+LINEW)+18,2*SS))
             data['sa9'] += 'o'
         else:
-            squarenum += randint(1,9)
+            squarenum += randint(1,9) #
             computerTurn()
         winner()
     return
@@ -213,6 +207,7 @@ if __name__ == '__main__':
     data['sa8'] = ''
     data['sa9'] = ''
     data['gameEnd'] = False
+    data['piecePlaced'] = False
     
         #GRAPHICS
     
