@@ -52,12 +52,12 @@ def mouseClick(event): #responds to user's input and places an X where they clic
         Sprite(x,(2*(SS+LINEW)+18,2*SS))
         data['sa9'] += 'x'
         data['piecePlaced'] += True
-    else:
-        return
-    if data['piecePlaced'] == True:
+    elif data['piecePlaced'] == True:
         data['piecePlaced'] += False
         winner()
         computerTurn()
+    else:
+        return
     
 def isEmpty(squareNumber): #a function that is used to tell whether a square is empty or occupied with an x or o.
     if squareNumber == 1:
