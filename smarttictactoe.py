@@ -127,7 +127,7 @@ def computerTurn(): #generates a random number which corresponds to a square in 
             data['sa6'] += 'o'
         elif (data['sa1'] == 'x' and data['sa4'] == 'x' and isEmpty(7) == True) or (data['sa3'] == 'x' and data['sa5'] == 'x' and isEmpty(7) == True) or (data['sa8'] == 'x' and data['sa9'] == 'x' and isEmpty(7) == True):
             Sprite(o,(18,2*SS))
-            data['sa7'] += 'o'data['sa7'] += 'o'
+            data['sa7'] += 'o'
         elif (data['sa2'] == 'x' and data['sa5'] == 'x' and isEmpty(8) == True) or (data['sa7'] == 'x' and data['sa9'] == 'x' and isEmpty(8) == True):
             Sprite(o,(SS+LINEW+18,2*SS))
             data['sa8'] += 'o'
