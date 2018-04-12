@@ -17,7 +17,7 @@ LINEL = 3*SS
 
 def mouseClick(event): #responds to user's input and places an X where they click and calls the computer's turn, unless the spot is full or the click is off the board
     data['piecePlaced'] = False #variable to tell whether a piece is placed
-    if data['gameEnd'] == False:
+    if data['gameEnd'] == False: #makes sure the game isn't over
         if event.x < SS and event.y < SS and isEmpty(1) == True:
             Sprite(x,(18,0))
             data['sa1'] += 'x'
