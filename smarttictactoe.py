@@ -109,22 +109,31 @@ def computerTurn(): #generates a random number which corresponds to a square in 
         
         if (data['sa3'] == 'x' and data['sa2'] == 'x' and isEmpty(1) == True) or (data['sa5'] == 'x' and data['sa9'] == 'x' and isEmpty(1) == True) or (data['sa4'] == 'x' and data['sa7'] == 'x' and isEmpty(1) == True):
             Sprite(o,(18,0))
+            data['sa1'] += 'o'
         elif (data['sa1'] == 'x' and data['sa3'] == 'x' and isEmpty(2) == True) or (data['sa5'] == 'x' and data['sa8'] == 'x' and isEmpty(2) == True):
             Sprite(o,(SS+LINEW+18,0))
+            data['sa2'] += 'o'
         elif (data['sa1'] == 'x' and data['sa2'] == 'x' and isEmpty(3) == True) or (data['sa5'] == 'x' and data['sa7'] == 'x' and isEmpty(3) == True) or (data['sa6'] == 'x' and data['sa9'] == 'x' and isEmpty(3) == True):
             Sprite(o,(2*(SS+LINEW)+18,0))
+            data['sa3'] += 'o'
         elif (data['sa1'] == 'x' and data['sa7'] == 'x' and isEmpty(4) == True) or (data['sa5'] == 'x' and data['sa6'] == 'x' and isEmpty(4) == True):
             Sprite(o,(18,SS+LINEW))
+            data['sa4'] += 'o'
         elif (data['sa1'] == 'x' and data['sa3'] == 'x' and isEmpty(5) == True) or (data['sa2'] == 'x' and data['sa8'] == 'x' and isEmpty(5) == True) or (data['sa3'] == 'x' and data['sa7'] == 'x' and isEmpty(5) == True) or (data['sa4'] == 'x' and data['sa6'] == 'x' and isEmpty(5) == True):
             Sprite(o,(SS+LINEW+18,SS))
+            data['sa5'] += 'o'
         elif (data['sa3'] == 'x' and data['sa9'] == 'x' and isEmpty(6) == True) or (data['sa4'] == 'x' and data['sa5'] == 'x' and isEmpty(6) == True):
             Sprite(o,(2*(SS+LINEW)+18,SS))
+            data['sa6'] += 'o'
         elif (data['sa1'] == 'x' and data['sa4'] == 'x' and isEmpty(7) == True) or (data['sa3'] == 'x' and data['sa5'] == 'x' and isEmpty(7) == True) or (data['sa8'] == 'x' and data['sa9'] == 'x' and isEmpty(7) == True):
             Sprite(o,(18,2*SS))
+            data['sa7'] += 'o'data['sa7'] += 'o'
         elif (data['sa2'] == 'x' and data['sa5'] == 'x' and isEmpty(8) == True) or (data['sa7'] == 'x' and data['sa9'] == 'x' and isEmpty(8) == True):
             Sprite(o,(SS+LINEW+18,2*SS))
+            data['sa8'] += 'o'
         elif (data['sa3'] == 'x' and data['sa6'] == 'x' and isEmpty(9) == True) or (data['sa1'] == 'x' and data['sa5'] == 'x' and isEmpty(9) == True) or (data['sa8'] == 'x' and data['sa7'] == 'x' and isEmpty(9) == True):
             Sprite(o,(2*(SS+LINEW)+18,2*SS))
+            data['sa9'] += 'o'
         else:
             squarenum = randint(1,9) #chooses random square
             if squarenum == 1 and isEmpty(1) == True: #makes sure square is empty
