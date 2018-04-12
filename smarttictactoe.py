@@ -105,6 +105,8 @@ def computerTurn(): #generates a random number which corresponds to a square in 
         return
     if data['gameEnd'] == False: #makes sure the game hasn't already been won by the user
         
+        #only works for three?
+        
         if (data['sa3'] == 'x' and data['sa2'] == 'x' and isEmpty(1) == True) or (data['sa5'] == 'x' and data['sa9'] == 'x' and isEmpty(1) == True) or (data['sa4'] == 'x' and data['sa7'] == 'x' and isEmpty(1) == True):
             Sprite(o,(18,0))
         elif (data['sa1'] == 'x' and data['sa3'] == 'x' and isEmpty(2) == True) or (data['sa5'] == 'x' and data['sa8'] == 'x' and isEmpty(2) == True):
