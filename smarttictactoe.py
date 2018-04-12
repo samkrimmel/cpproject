@@ -104,6 +104,17 @@ def computerTurn(): #generates a random number which corresponds to a square in 
     if fullBoard() == True: #makes sure there isn't a full board
         return
     if data['gameEnd'] == False: #makes sure the game hasn't already been won by the user
+        
+        if data['sa1'] == 'x' and data['sa2'] == 'x':
+            Sprite(o,(2*(SS+LINEW)+18,0))
+        elif data['sa2'] == 'x' and data['sa3'] == 'x':
+            Sprite(o,(18,0))
+        elif (data['sa1'] == 'x' and data['sa4'] == 'x') or (data['sa3'] == 'x' and data['sa5'] == 'x') or (data['sa8'] == 'x' and data['sa9'] == 'x'):
+            Sprite(o,(18,2*SS))
+        elif data['sa1'] == 'x' and data['sa5'] == 'x':
+            Sprite(o,(2*(SS+LINEW)+18,2*SS))
+        
+        
         squarenum = randint(1,9) #chooses random square
         if squarenum == 1 and isEmpty(1) == True: #makes sure square is empty
             Sprite(o,(18,0)) #sprites the o
