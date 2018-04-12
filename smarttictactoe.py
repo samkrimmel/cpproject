@@ -105,23 +105,23 @@ def computerTurn(): #generates a random number which corresponds to a square in 
         return
     if data['gameEnd'] == False: #makes sure the game hasn't already been won by the user
         
-        if (data['sa3'] == 'x' and data['sa2'] == 'x') or (data['sa5'] == 'x' and data['sa9'] == 'x') or (data['sa4'] == 'x' and data['sa7'] == 'x'):
+        if (data['sa3'] == 'x' and data['sa2'] == 'x' and isEmpty(1) == True) or (data['sa5'] == 'x' and data['sa9'] == 'x' and isEmpty(1) == True) or (data['sa4'] == 'x' and data['sa7'] == 'x' and isEmpty(1) == True):
             Sprite(o,(18,0))
-        elif (data['sa1'] == 'x' and data['sa3'] == 'x') or (data['sa5'] == 'x' and data['sa8'] == 'x'):
+        elif (data['sa1'] == 'x' and data['sa3'] == 'x' and isEmpty(2) == True) or (data['sa5'] == 'x' and data['sa8'] == 'x' and isEmpty(2) == True):
             Sprite(o,(SS+LINEW+18,0))
-        elif (data['sa1'] == 'x' and data['sa2'] == 'x') or (data['sa5'] == 'x' and data['sa7'] == 'x') or (data['sa6'] == 'x' and data['sa9'] == 'x'):
+        elif (data['sa1'] == 'x' and data['sa2'] == 'x' and isEmpty(3) == True) or (data['sa5'] == 'x' and data['sa7'] == 'x' and isEmpty(3) == True) or (data['sa6'] == 'x' and data['sa9'] == 'x' and isEmpty(3) == True):
             Sprite(o,(2*(SS+LINEW)+18,0))
-        elif (data['sa1'] == 'x' and data['sa7'] == 'x') or (data['sa5'] == 'x' and data['sa6'] == 'x'):
+        elif (data['sa1'] == 'x' and data['sa7'] == 'x' and isEmpty(4) == True) or (data['sa5'] == 'x' and data['sa6'] == 'x' and isEmpty(4) == True):
             Sprite(o,(18,SS+LINEW))
-        elif (data['sa1'] == 'x' and data['sa3'] == 'x') or (data['sa2'] == 'x' and data['sa8'] == 'x') or (data['sa3'] == 'x' and data['sa7'] == 'x') or (data['sa4'] == 'x' and data['sa6'] == 'x'):
+        elif (data['sa1'] == 'x' and data['sa3'] == 'x' and isEmpty(5) == True) or (data['sa2'] == 'x' and data['sa8'] == 'x' and isEmpty(5) == True) or (data['sa3'] == 'x' and data['sa7'] == 'x' and isEmpty(5) == True) or (data['sa4'] == 'x' and data['sa6'] == 'x' and isEmpty(5) == True):
             Sprite(o,(SS+LINEW+18,SS))
-        elif (data['sa3'] == 'x' and data['sa9'] == 'x') or (data['sa4'] == 'x' and data['sa5'] == 'x'):
+        elif (data['sa3'] == 'x' and data['sa9'] == 'x' and isEmpty(6) == True) or (data['sa4'] == 'x' and data['sa5'] == 'x' and isEmpty(6) == True):
             Sprite(o,(2*(SS+LINEW)+18,SS))
-        elif (data['sa1'] == 'x' and data['sa4'] == 'x') or (data['sa3'] == 'x' and data['sa5'] == 'x') or (data['sa8'] == 'x' and data['sa9'] == 'x'):
+        elif (data['sa1'] == 'x' and data['sa4'] == 'x' and isEmpty(7) == True) or (data['sa3'] == 'x' and data['sa5'] == 'x' and isEmpty(7) == True) or (data['sa8'] == 'x' and data['sa9'] == 'x' and isEmpty(7) == True):
             Sprite(o,(18,2*SS))
-        elif (data['sa2'] == 'x' and data['sa5'] == 'x') or (data['sa7'] == 'x' and data['sa9'] == 'x'):
+        elif (data['sa2'] == 'x' and data['sa5'] == 'x' and isEmpty(8) == True) or (data['sa7'] == 'x' and data['sa9'] == 'x' and isEmpty(8) == True):
             Sprite(o,(SS+LINEW+18,2*SS))
-        elif (data['sa3'] == 'x' and data['sa6'] == 'x') or (data['sa1'] == 'x' and data['sa5'] == 'x') or (data['sa8'] == 'x' and data['sa7'] == 'x'):
+        elif (data['sa3'] == 'x' and data['sa6'] == 'x' and isEmpty(9) == True) or (data['sa1'] == 'x' and data['sa5'] == 'x' and isEmpty(9) == True) or (data['sa8'] == 'x' and data['sa7'] == 'x' and isEmpty(9) == True):
             Sprite(o,(2*(SS+LINEW)+18,2*SS))
         else:
             squarenum = randint(1,9) #chooses random square
