@@ -55,9 +55,9 @@ def mouseClick(event): #responds to user's input and places an X where they clic
     else:
         return
     if data['piecePlaced'] == True:
+        data['piecePlaced'] += False
         winner()
         computerTurn()
-        data['piecePlaced'] += False
         
         
     
